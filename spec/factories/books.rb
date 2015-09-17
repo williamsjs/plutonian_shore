@@ -14,7 +14,7 @@ FactoryGirl.define do
     trait :matheson do
       title "Hell House"
       publication_year 1977
-      synopsis "Paranormal experts attempt to rid an ancient house of the evil soul that once physically inhabited the house"
+      synopsis "Paranormal experts attempt to rid an ancient house of the evil soul that once physically inhabited it"
     end
 
   end

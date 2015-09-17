@@ -1,0 +1,17 @@
+<h1>Create Book</h1>
+
+<%= form_for(@book) do |f|%>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :publication_year %>
+    <%= f.text_field :publication_year %>
+  </div>
+  <div class="field">
+    <%= f.label :synopsis %>
+    <%= f.text_area :synopsis %>
+  </div>
+  <%= f.submit "submit form" %>
+<% end %>
