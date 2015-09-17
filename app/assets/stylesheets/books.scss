@@ -15,15 +15,44 @@
 }
 
 #index {
+
+  nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2em;
+      line-height: 40px;
+      height: 40px;
+      border-bottom: 1px solid #888;
+      display: inline;
+      margin: auto 3%;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+
   h1.title {
     font-family: 'silverfakeregular';
     text-align: center;
     font-size: 80px;
     line-height: 80px;
     color: #BBB;
-    text-shadow: 4px 4px 2px #9B30FF;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-delay: 1s;
+    background: rgb(41, 21, 114);
+    text-shadow: 4px 4px 2px black;
+    -webkit-animation-duration: 4s;
     -webkit-animation-iteration-count: 1;
+    margin: 12px auto;
+  }
+
+  img {
+    float: right;
+    border-top: 10px solid black;
   }
 }
