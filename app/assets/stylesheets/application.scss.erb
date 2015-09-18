@@ -99,12 +99,13 @@ body.animated, body.fadeIn {
   h1.title {
     font-family: 'silverfakeregular';
     text-align: center;
-    font-size: 80px;
+    font-size: 5.5vw;
     line-height: 80px;
     color: #BBB;
     background: rgb(41, 21, 114);
     text-shadow: 4px 4px 2px black;
-    margin: 12px 20px 5px;
+    margin: 12px auto auto;
+    padding-left: 15px;
     z-index: -1;
     width: 100%;
   }
@@ -145,4 +146,10 @@ $parallax-background-height: $parallax-window-height * 2;
   position: absolute;
   top: - $parallax-window-height / 3;
   width: 100%;
+}
+
+@media (max-width: 975px) {
+  #poe-image {
+    display: none;
+  }
 }
