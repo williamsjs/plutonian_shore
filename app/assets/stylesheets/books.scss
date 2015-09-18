@@ -46,6 +46,9 @@
           a:hover {
             background-color: darkred;
           }
+          a.current {
+            border-bottom: 5px solid white;
+          }
       }
     }
   }
@@ -68,5 +71,6 @@
     float: right;
     border-right: 2.5px solid black;
     border-bottom: 2.5px solid black;
+
   }
 }
