@@ -2,13 +2,27 @@
 <html>
 <head>
   <title>PlutonianShore</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
+<body class="animated fadeIn">
+  <div id="index">
+      <nav>
+        <img src="<%= asset_path('poe.jpg') %>" />
+        <ul>
+          <li><a href="#" class=<%= "current" if current_page?(root_path) %>>HOME</a></li>
+          <li><a href="#" class=<%= "current" if current_page?(new_book_path) %>>ARTICLES</a></li>
+          <li><a href="#" class=<%= "current" if current_page?(new_book_path) %>>BOOKS</a></li>
+          <li><a href="#" class=<%= "current" if current_page?(new_book_path) %>>MOVIES</a></li>
+          <li><a href="#" class=<%= "current" if current_page?(new_book_path) %>>VIDEO GAMES</a></li>
+          <li><a href="#" class=<%= "current" if current_page?(new_book_path) %>>REVIEWS</a></li>
+        </ul>
+      </nav>
+      <h1 class="title">Plutonian Shore</h1>
+  </div>
+  <div id="background">
 <%= yield %>
-
+  </div>
 </body>
 </html>
