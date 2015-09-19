@@ -110,7 +110,7 @@ body.animated, body.fadeIn {
     text-shadow: 4px 4px 2px black;
     margin: 12px auto auto;
     padding-left: 15px;
-    z-index: -1;
+    z-index: 20;
     width: 100%;
   }
 
@@ -156,8 +156,17 @@ $parallax-background-height: $parallax-window-height * 2;
   #poe-image {
     display: none;
   }
+  #main h1.title {
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 600px) {
-
+  #main h1.title {
+    position: fixed;
+    margin-top: 0px;
+  }
+  ul {
+    display: none;
+  }
 }
