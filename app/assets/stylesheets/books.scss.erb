@@ -3,13 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #index {
-  h1 {
-    padding-top: 20px;
-    font-size: 20px;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px black;
-  }
   .flex-boxes {
     ///////////////////////////////////////////////////////////////////////////////////
     $base-border-radius: 3px !default;
@@ -25,7 +18,7 @@
 
     $flex-box-border-color: $light-gray;
     $flex-box-border: 1px solid $flex-box-border-color;
-    $flex-box-background: lighten($light-gray, 10%);
+    $flex-box-background: #222;
     $flex-box-gutter: 0.4em;
     $flex-box-width: 18em;
     $flex-box-color: transparentize($base-font-color, 0.3);
@@ -58,12 +51,12 @@
 
       @for $i from 1 to 7 { // assign colors from $flex-box-top-colors list
         &:nth-child(#{$i}) {
-          $color-from-list: nth($flex-box-top-colors, $i);
+          $color-from-list: white;
           border-top: 6px solid $color-from-list;
 
           &:focus,
           &:hover {
-            background-color: transparentize($color-from-list, 0.9);
+            background-color: white;
           }
         }
       }
@@ -77,14 +70,15 @@
       }
 
       .flex-title {
-        color: $flex-box-color;
+        color: white;
+        font: 'league_gothicregular';
         font-size: 1.2em;
         font-weight: 800;
         margin-bottom: 0.5em;
       }
 
       p {
-        color: transparentize($flex-box-color, 0.1);
+        color: transparentize($flex-box-color, 1);
         line-height: 1.5em;
         margin: auto;
       }
