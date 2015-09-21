@@ -126,7 +126,7 @@ body.animated, body.fadeIn {
     z-index: 20;
     width: 100%;
 
-    #hidden-button {
+    #hidden-favicon {
       display: none;
     }
   }
@@ -182,14 +182,15 @@ $parallax-background-height: $parallax-window-height * 2;
   #main h1.title {
     position: fixed;
     margin-top: 0px;
-
-    #hidden-button {
-      display: inline;
-      margin-right: 50px;
-    }
+    padding: auto;
   }
-  ul {
-    display: none;
+  #main nav {
+    padding-left: 0;
+    margin-left: 0;
+    ul li {
+    display: block;
+    margin: auto;
+    }
   }
 
 }
