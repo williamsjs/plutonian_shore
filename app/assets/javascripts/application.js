@@ -44,3 +44,11 @@ function parallax(){
         plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
     }
 }
+
+function showMobileMenu() {
+  $('#i-nav').click(function() {
+    $('ul').toggleClass('show');
+  });
+}
+
+$(showMobileMenu);

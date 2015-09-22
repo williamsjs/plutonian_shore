@@ -83,6 +83,14 @@ body.animated, body.fadeIn {
       float: left;
       border: 0px 3px solid black;
     }
+    .show {
+      display: block;
+
+      li {
+        display: block;
+        margin: auto;
+      }
+    }
     ul {
       list-style: none;
       text-align: center;
@@ -112,6 +120,17 @@ body.animated, body.fadeIn {
     }
   }
 
+  #i-nav {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: aqua;
+    z-index: 50;
+
+  }
   h1.title {
     font-family: 'october_crowregular';
     text-align: center;
@@ -187,9 +206,8 @@ $parallax-background-height: $parallax-window-height * 2;
   #main nav {
     padding-left: 0;
     margin-left: 0;
-    ul li {
-    display: block;
-    margin: auto;
+    ul {
+      display: none;
     }
   }
 
