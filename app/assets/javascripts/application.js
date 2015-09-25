@@ -48,7 +48,7 @@ function parallax(){
 function showMobileMenu() {
   $('#i-nav').click(function() {
     $('ul').toggleClass('show');
-    $(this).css({top: "240px"});
+    $(this).toggleClass('clicked');
   });
 }
 
