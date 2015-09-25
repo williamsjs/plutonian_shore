@@ -127,17 +127,18 @@ body.animated, body.fadeIn {
     }
   }
 
-  #i-nav {
-    display: none;
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    width: 44px;
-    height: 44px;
+  a#i-nav {
     background-image: url('<%= asset_path("button.png") %>');
     background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    height: 40px;
     z-index: 50;
-
+    box-shadow: 2px 2px 2px 2px black;
   }
   h1.title {
     font-family: 'october_crowregular';
@@ -207,7 +208,10 @@ $parallax-background-height: $parallax-window-height * 2;
   #main h1.title {
     position: fixed;
     margin-top: 0px;
+    margin-left: 0;
     padding: auto;
+    text-align: left;
+    padding-left: 25px;
   }
   #main nav {
     padding-left: 0;
@@ -217,8 +221,9 @@ $parallax-background-height: $parallax-window-height * 2;
       display: none;
     }
   }
-  #main #i-nav {
+  #main a#i-nav {
     display: block;
+    position: fixed;
   }
 
 }
