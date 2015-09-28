@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :articles
   resources :books
   root 'books#index'
-  get 'books/articles', to: "books#articles", as: 'articles'
+  #get 'books/articles', to: "books#articles", as: 'articles'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
