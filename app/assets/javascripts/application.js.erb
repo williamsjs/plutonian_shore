@@ -52,4 +52,15 @@ function showMobileMenu() {
   });
 }
 
+
+function fadeInOnce() {
+  if (document.cookie.search(/loaded/) === -1) {
+    $('body').addClass('fadeIn');
+    document.cookie = "loaded"
+  }
+};
+
+
+
 $(showMobileMenu);
+$(fadeInOnce);
