@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150928050918) do
+ActiveRecord::Schema.define(version: 20150928052111) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "name"
@@ -38,6 +38,31 @@ ActiveRecord::Schema.define(version: 20150928050918) do
     t.text     "synopsis"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string   "title"
+    t.float    "rating"
+    t.date     "release_date"
+    t.text     "review"
+    t.text     "article"
+    t.string   "author"
+    t.string   "developer"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.string   "title"
+    t.string   "director"
+    t.float    "rating"
+    t.text     "review"
+    t.text     "description"
+    t.string   "author"
+    t.date     "date_published"
+    t.integer  "year"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

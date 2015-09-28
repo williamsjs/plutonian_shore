@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  resources :games
+  resources :movies
+  get 'home/index'
+
   resources :articles
   resources :books
-  root 'books#index'
+  root 'home#index'
+
   #get 'books/articles', to: "books#articles", as: 'articles'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
