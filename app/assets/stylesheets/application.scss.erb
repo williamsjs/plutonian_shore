@@ -96,7 +96,6 @@ body.animated, body.fadeIn {
     }
 
     ul {
-      list-style: none;
       text-align: center;
       padding: 0;
       margin: 0;
@@ -139,10 +138,6 @@ body.animated, body.fadeIn {
     z-index: 50;
     box-shadow: 2px 2px 2px 2px black;
     border-radius: 3px;
-  }
-
-  a#i-nav.clicked {
-    top: 200px;
   }
 
   h1.title {
@@ -229,6 +224,9 @@ $parallax-background-height: $parallax-window-height * 2;
 
     ul {
       display: none;
+      li {
+        display: block;
+      }
     }
   }
   #main a#i-nav {
