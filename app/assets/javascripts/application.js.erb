@@ -51,8 +51,8 @@ function showMobileMenu() {
     $('li').hide();
     var num = 500
     $('li').each(function() {
-      $(this).fadeIn(500 + num);
-      num += 500;
+      $(this).slideDown(200 + num);
+      num += 200;
     });
     $(this).toggleClass('clicked');
   });
