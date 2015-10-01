@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PlutonianShore</title>
+  <title>Plutonian Shore</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -11,11 +11,11 @@
       <nav>
         <img src="<%= asset_path('poe.jpg') %>" id="poe-image"/>
         <ul>
-          <li><a href=<%= root_path %> class=<%= "current" if current_page?(root_path) %>>HOME</a></li>
-          <li><a href=<%= articles_path %> class=<%= "current" if current_page?(articles_path) %>>ARTICLES</a></li>
-          <li><a href=<%= books_path %> class=<%= "current" if current_page?(books_path) %>>BOOKS</a></li>
-          <li><a href=<%= movies_path %> class=<%= "current" if current_page?(movies_path) %>>MOVIES</a></li>
-          <li><a href=<%= games_path %> class=<%= "current" if current_page?(games_path) %>>VIDEO GAMES</a></li>
+          <li class="hidden"><a href=<%= root_path %> class=<%= "current" if current_page?(root_path) %>>HOME</a></li>
+          <li class="hidden"><a href=<%= articles_path %> class=<%= "current" if current_page?(articles_path) %>>ARTICLES</a></li>
+          <li class="hidden"><a href=<%= books_path %> class=<%= "current" if current_page?(books_path) %>>BOOKS</a></li>
+          <li class="hidden"><a href=<%= movies_path %> class=<%= "current" if current_page?(movies_path) %>>MOVIES</a></li>
+          <li class="hidden"><a href=<%= games_path %> class=<%= "current" if current_page?(games_path) %>>VIDEO GAMES</a></li>
         </ul>
       </nav>
       <a id="i-nav" class="not-clicked" href="#"></a>

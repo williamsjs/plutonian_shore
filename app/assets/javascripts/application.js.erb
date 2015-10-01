@@ -46,16 +46,27 @@ function parallax(){
 }
 
 function showMobileMenu() {
-  $('#i-nav').click(function() {
+  $('#i-nav').on('click', function() {
     $('ul').toggleClass('show');
     $('li').hide();
-    var num = 500
+    var num = 200
     $('li').each(function() {
-      $(this).slideDown(200 + num);
-      num += 200;
+      //slideChoice($('li'));
+      if ($('li.hidden')) {
+        $(this).slideDown(200 + num);
+        num += 200;
+        $('li').toggleClass('hidden');
+      } else {
+        $(this).slideUp(200 + num);
+        num += 200;
+        $('li').toggleClass('hidden');
+      }
     });
     $(this).toggleClass('clicked');
   });
+}
+
+function slideChoice(li) {
 }
 
 
