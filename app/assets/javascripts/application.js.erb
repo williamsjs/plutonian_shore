@@ -52,14 +52,12 @@ function showMobileMenu() {
     animateSlide($(this));
   });
 }
-// 
-// function animateSlide(currentEl) {
-//   currentEl.clickToggle(function() {
-//     $(this).animate({"top": "200px"}, 400)
-//   }, function() {
-//     $(this).animate({"top": "20px"}, 400)
-//   });
-// }
+
+function animateSlide(currentEl) {
+  if (currentEl.hasClass('clicked').length) {
+    alert("blicked");
+  }
+}
 
 function fadeInOnce() {
   if (document.cookie.search(/loaded/) === -1) {
@@ -67,8 +65,6 @@ function fadeInOnce() {
     document.cookie = "loaded"
   }
 };
-
-
 
 $(showMobileMenu);
 $(fadeInOnce);
