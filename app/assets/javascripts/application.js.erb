@@ -48,6 +48,12 @@ function parallax(){
 function showMobileMenu() {
   $('#i-nav').click(function() {
     $('ul').toggleClass('show');
+    $('li').hide();
+    var num = 500
+    $('li').each(function() {
+      $(this).fadeIn(500 + num);
+      num += 500;
+    });
     $(this).toggleClass('clicked');
   });
 }
