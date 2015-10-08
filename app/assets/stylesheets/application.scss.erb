@@ -166,7 +166,7 @@ body.animated, body.fadeIn {
   }
 }
 
-$parallax-window-height: 20em;
+$parallax-window-height: 30em;
 $parallax-background-height: $parallax-window-height * 2;
 
 .parallax-window {
@@ -231,6 +231,46 @@ $parallax-background-height: $parallax-window-height * 2;
   }
   #main a#i-nav {
     display: inline;
+    margin: auto 2.5%;
   }
 
+}
+
+@media only screen
+    and (min-device-width : 414px)
+    and (max-device-width : 736px)
+    and (device-width : 414px)
+    and (device-height : 736px)
+    and (orientation : portrait)
+    and (-webkit-min-device-pixel-ratio : 3)
+    and (-webkit-device-pixel-ratio : 3)
+{
+
+  #poe-image {
+    display: none;
+  }
+  #main h1.title {
+    position: fixed;
+    margin-top: 0px;
+    margin-left: 0;
+    padding: auto;
+    text-align: left;
+    padding-left: 25px;
+  }
+
+  #main nav {
+    padding-left: 0;
+    margin-left: 0;
+
+    ul {
+      display: none;
+      li {
+        display: block;
+      }
+    }
+  }
+  #main a#i-nav {
+    display: inline;
+    margin: auto 2.5%;
+  }
 }
