@@ -71,7 +71,8 @@ body.animated, body.fadeIn {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 65em;
+  background-attachment: fixed;
+  min-height: 30em;
 }
 
 #main {
@@ -166,34 +167,7 @@ body.animated, body.fadeIn {
   }
 }
 
-$parallax-window-height: 30em;
-$parallax-background-height: $parallax-window-height * 2;
 
-.parallax-window {
-  height: $parallax-window-height;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-.parallax-static-content {
-  color: #9A9A8A;
-  position: relative;
-  z-index: 9;
-}
-
-.parallax-background {
-  background:
-  asset_url('main_background.jpg');
-  background-size: 100%;
-  padding: 50px 20px 0;
-  height: $parallax-background-height;
-  left: 0;
-  position: absolute;
-  top: - $parallax-window-height / 3;
-  width: 100%;
-}
 
 @media (max-width: 975px) {
 
