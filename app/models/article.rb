@@ -1,25 +1,27 @@
 class Article < ActiveRecord::Base
 
 
-  def self.get_ten_articles
+  def self.create_ten_articles
+    articles = get_articles['list']['story']
     10.times do |count|
-      title = get_articles['list']['story'][count]['title']['$text']
-      Article.create(name: title)
+      get_content(articles[count])
     end
   end
 
   class << self
-    
+
     private
       def get_articles
         content = HTTParty.get("http://api.npr.org/query?searchTerm=horror&output=json&apiKey=#{ENV['NPR_KEY']}")
         JSON.parse(content)  #funky npr json format
       end
 
-      def get_content(count)
-        # article = get_article so we don't have to keep repeating same function
-        title = get_articles['list']['story'][count]['title']['$text']
-        Article.create(title: title)
+      def get_content(article)
+        name = article['title']['$text']
+        content = article['fullText']['$text'] unless article['fullText'].nil?
+        date_published = article['storyDate']['$text']
+        image = article['image'][0]['src'] unless article['image'].nil?
+        Article.create(name: name, content: content, date_published: date_published, image: image)
       end
 
   end
