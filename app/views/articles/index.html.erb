@@ -1,9 +1,9 @@
 <div id="articles">
   <% @articles.each do |article| %>
-    <ul id="articles">
-      <img src="<%= article.image %>" />
-      <li><%= article.name %></li>
-      <li><%= article.date_published %></li>
-    </ul>
+    <img src="<%= article.image %>" />
+    <div id="article">
+    <h1><%= article.name %></h1>
+    <h4><%= article.date_published %></h4>
+  </div>
   <% end %>
 </div>
