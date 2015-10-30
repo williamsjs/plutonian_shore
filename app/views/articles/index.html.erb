@@ -1,1 +1,8 @@
-<h1></h1>
+<%= @articles.each do |article| %>
+  <ul id="articles">
+    <li><% article.image %></li>
+    <li><% article.name %></li>
+    <li><% article.date_published %></li>
+    <li><% article.content %></li>
+  </ul>
+<%  %>
