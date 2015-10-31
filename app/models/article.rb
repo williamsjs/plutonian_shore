@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-
+  validates :name, uniqueness: true
 
   def self.create_ten_articles
     articles = get_articles['list']['story']
@@ -18,7 +18,7 @@ class Article < ActiveRecord::Base
 
       def get_content(article)
         name = article['title']['$text']
-        content = article['fullText']['$text'] unless article['fullText'].nil?
+        content = article['link'][0]['$text'] unless article['link'].nil?
         date_published = article['storyDate']['$text']
         image = article['image'][0]['src'] unless article['image'].nil?
         Article.create(name: name, content: content, date_published: date_published, image: image)

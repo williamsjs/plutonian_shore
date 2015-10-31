@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.all.order(date_published: :desc)  #display most recent story first
   end
 
   # GET /articles/1

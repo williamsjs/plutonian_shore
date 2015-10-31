@@ -2,9 +2,8 @@
   <% @articles.each do |article| %>
     <img src="<%= article.image %>" />
     <div id="article">
-      <h1><%= article.name %></h1>
+      <h1><a href="<%= article.content %>" target="_blank"><%= article.name %></a></h1>
       <h4><%= article.date_published %></h4>
     </div>
-  </div>
   <% end %>
 </div>
