@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
   validates :name, uniqueness: true
 
-  def self.create_ten_articles
+  def self.create_five_articles
     articles = get_articles['list']['story']
     5.times do |count|
       get_content(articles[count])
