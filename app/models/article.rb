@@ -3,7 +3,7 @@ class Article < ActiveRecord::Base
 
   def self.create_ten_articles
     articles = get_articles['list']['story']
-    10.times do |count|
+    5.times do |count|
       get_content(articles[count])
     end
   end
